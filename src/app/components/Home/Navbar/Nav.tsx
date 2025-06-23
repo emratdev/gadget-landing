@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import React from 'react'
-import { navLinks } from '@/app/constant/constant'
-import { FaShoppingBag } from 'react-icons/fa';
-import { HiBars3BottomRight } from 'react-icons/hi2'; 
+import Link from "next/link";
+import React from "react";
+import { navLinks } from "@/app/constant/constant";
+import { FaShoppingBag } from "react-icons/fa";
+import { HiBars3BottomRight } from "react-icons/hi2";
 
 type Props = {
-    openNav:() => void;
-}
+  openNav: () => void;
+};
 
 const Nav = ({ openNav }: Props) => {
   return (
@@ -55,4 +55,4 @@ const Nav = ({ openNav }: Props) => {
   );
 };
 
-export default Nav
+export default Nav;
