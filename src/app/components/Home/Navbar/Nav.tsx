@@ -1,16 +1,32 @@
+'use clients';
 import Link from "next/link";
-import React from "react";
+import React, { use, useEffect } from "react";
 import { navLinks } from "@/app/constant/constant";
 import { FaShoppingBag } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import ThemeToggle from "../../Helper/ThemeToggle";
 
 type Props = {
   openNav: () => void;
 };
 
 const Nav = ({ openNav }: Props) => {
+    const [navBg, setNavBg] = React.useState(false);
+
+    useEffect(()=> {
+        const handler = () => {
+            if (window.scrollY >= 90) setNavBg(true);
+            else setNavBg(false);
+        };
+        window.addEventListener('scroll', handler); 
+
+        return () => {
+            window.removeEventListener('scroll', handler);
+        }
+    }, [])
+
   return (
-    <div className="transition-all duration-200 h-[12vh] z-[100] fixed w-full bg-pink-700">
+    <div className={`transition-all ${navBg ? "bg-pink-700 shadow-md" : "fixed"} duration-200 h-[12vh] z-[100] fixed w-full `}>
       <div className="flex items-center h-full justify-between sm:w-[80%] w-[90%] mx-auto">
         <div className="text-white font-bold text-2xl sm:text-3xl">LOGO</div>
         {/* NavLinks */}
@@ -43,6 +59,7 @@ const Nav = ({ openNav }: Props) => {
             </span>
           </a>
           {/* Dark Theme */}
+          <ThemeToggle/>
 
           {/* Burger Menu */}
           <HiBars3BottomRight
