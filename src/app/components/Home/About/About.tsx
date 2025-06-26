@@ -64,10 +64,13 @@ const About = ({imageOrder, linkText, textOrder, title}:Props) => {
           </div>
         </div>
         {/* Image content */}
-        <div className={`${imageOrder}`}>
-            <Image src="/images/h1.png" alt="image" width={380} height={380}/>
+        <div
+          data-aos="zoom-in"
+          data-aos-anchor-placement="top-center"
+          className={`${imageOrder}`}
+        >
+          <Image src="/images/h1.png" alt="image" width={380} height={380} />
         </div>
-
       </div>
     </div>
   );

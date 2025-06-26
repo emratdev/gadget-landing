@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative w-full h-screen flex justify-center flex-col bg-pink-800 bg_clip">
       <div className="w-[90%] md-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2 gap-40">
         {/* Text Context */}
-        <div>
+        <div data-aos="fade-up">
           <h1
             className="text-3xl md:text-4xl text-white lg:text-5xl mt-6 mb-6 font-bold leading-[2.5rem]
           md:leading-[3.5rem]"
@@ -94,8 +94,8 @@ const Hero = () => {
           </div>
         </div>
         {/* Image Context */}
-        <div className='mx-auto hidden xl:block'>
-            <Image src="/images/hero.png" alt='image' width={380} height={380}/>
+        <div data-aos="zoom-in" data-aos-delay="150" className="mx-auto hidden xl:block">
+          <Image src="/images/hero.png" alt="image" width={380} height={380} />
         </div>
       </div>
     </div>
