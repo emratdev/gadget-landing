@@ -8,7 +8,7 @@ const Footer = () => {
         className="w-[80%] mx-auto items-start grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2
     lg:grid-cols-4 gap-10"
       >
-        {/* { 1stpart} */}
+        {/* { 1st part} */}
         <div>
           <div className="text-white font-bold text-3xl">LOGO</div>
           <p className="mt-5 font-semibold text-gray-300 text-sm">
