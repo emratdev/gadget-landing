@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import React from 'react'
+import React from 'react';
+import HeroImage from "@public/images/hero.png";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -99,7 +100,13 @@ const Hero = () => {
           data-aos-delay="150"
           className="mx-auto hidden xl:block"
         >
-          <Image src="/images/hero.png" alt="image" width={380} height={380} />
+          <Image
+            src={HeroImage}
+            priority
+            alt="HeroImage"
+            width={380}
+            height={380}
+          />
         </div>
       </div>
     </div>
