@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import hero from "@public/images/hero.png";
 import React from 'react'
 
 const Hero = () => {
@@ -95,8 +94,12 @@ const Hero = () => {
           </div>
         </div>
         {/* Image Context */}
-        <div data-aos="zoom-in" data-aos-delay="150" className="mx-auto hidden xl:block">
-          <Image src={hero} alt="image" width={380} height={380} />
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="150"
+          className="mx-auto hidden xl:block"
+        >
+          <Image src="/images/hero.png" alt="image" width={380} height={380} />
         </div>
       </div>
     </div>
