@@ -1,17 +1,18 @@
-'use clients';
+'use client';
 import Link from "next/link";
-import React, { use, useEffect } from "react";
-import { navLinks } from "@/app/constant/constant";
+import React, { useEffect, useState } from "react";
+
 import { FaShoppingBag } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import ThemeToggle from "../../Helper/ThemeToggle";
+import { navLinks } from "../../../constant/constant";
 
 type Props = {
   openNav: () => void;
 };
 
 const Nav = ({ openNav }: Props) => {
-    const [navBg, setNavBg] = React.useState(false);
+    const [navBg, setNavBg] = useState(false);
 
     useEffect(()=> {
         const handler = () => {
@@ -48,7 +49,7 @@ const Nav = ({ openNav }: Props) => {
         <div className="flex items-center space-x-4">
           {/* Buy now button */}
           <a
-            href="#_"
+            href="#_" 
             className="box-border relative z-30 inline-flex items-center justify-center w-auto px-5 py-2.5 overflow-hidden font-bold text-white transition-all duration-300 bg-green-500 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-green-300 ring-offset-indigo-200 hover:ring-offset-green-500 ease focus:outline-none"
           >
             <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>

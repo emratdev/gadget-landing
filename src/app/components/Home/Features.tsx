@@ -1,4 +1,3 @@
-import { title } from 'process'
 import React from 'react'
 import { FaFingerprint } from 'react-icons/fa';
 import { HiOutlineChat } from 'react-icons/hi';

@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import hero from "@public/images/hero.png";
 import React from 'react'
 
 const Hero = () => {
   return (
     <div className="relative w-full h-screen flex justify-center flex-col bg-pink-800 bg_clip">
-      <div className="w-[90%] md-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2 gap-40">
+      <div className="w-[90%] md:w-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2 gap-40">
         {/* Text Context */}
         <div data-aos="fade-up">
           <h1
@@ -95,7 +96,7 @@ const Hero = () => {
         </div>
         {/* Image Context */}
         <div data-aos="zoom-in" data-aos-delay="150" className="mx-auto hidden xl:block">
-          <Image src="/images/hero.png" alt="image" width={380} height={380} />
+          <Image src={hero} alt="image" width={380} height={380} />
         </div>
       </div>
     </div>

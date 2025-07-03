@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect  } from 'react'
+import React, { useEffect, useState  } from 'react'
 import { FaArrowUp } from 'react-icons/fa';
 
 const ScrollToTop = () => {
 
-    const [isVisible, setIsVisible] = React.useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(()=> {
         const toggleVisibility = () => {

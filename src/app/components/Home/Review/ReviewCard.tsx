@@ -11,7 +11,7 @@ type Props = {
 const ReviewCard = ({image, name, role}:Props) => {
   return (
     <div>
-      <BsQuote className="w-14 h14 text-pink-500 text-5xl"/>
+      <BsQuote className="w-14 h-14 text-pink-500 text-5xl"/>
       <p className='text-center text-gray-800 dark:text-gray-200 text-sm'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
         dignissimos consequuntur nisi voluptatibus ullam quod natus similique

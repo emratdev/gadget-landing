@@ -1,35 +1,26 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react'
-import Hero from './Hero'
-import Features from './Features'
-import About from './About/About'
-import { MdReviews } from 'react-icons/md'
-import Review from './Review/Review'
-import Contact from './Contact'
+import React, { useEffect } from "react";
+import Hero from "./Hero";
+import Features from "./Features";
+import About from "./About/About";
+import Review from "./Review/Review";
+import Contact from "./Contact";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
-
-
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease",
+      once: true,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
 
-    useEffect(() => {
-        const initAos = async() => {
-            await import('aos');
-            AOS.init({
-                duration: 1000,
-                easing: 'ease',
-                once: true,
-                anchorPlacement: 'top-bottom',
-            });
-        };
-        initAos();
-    },[])
-
-  return ( 
+  return (
     <div className="overflow-hidden">
       <Hero />
       <Features />
@@ -45,10 +36,10 @@ const Home = () => {
         linkText="Shop Now"
         title="Capture pure sound with the 70mm HD Driver"
       />
-      <Review/>
-      <Contact/>
+      <Review />
+      <Contact />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
